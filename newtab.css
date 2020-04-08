@@ -1,16 +1,3 @@
-#free-to-use {
-    position: fixed;
-    left: 25%;
-    right: 25%;
-    display: none;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-family: Courier New, monospace;
-    padding: 10px;
-    margin-top: 10px;
-}
-
 p a {
     color: white;
 }
@@ -19,27 +6,23 @@ p a {
     width: 50%;
     margin-top: auto;
     margin-bottom: auto;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #navarrows img {
     height: 110px;
+    position: fixed;
+    top: 40%;
+    cursor: pointer;
 }
 
 #rightarrow {
-    position: fixed;
-    top: 40%;
     right: 0px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
+    margin-right: .5em;
 }
 
 #leftarrow {
-    position: fixed;
-    top: 40%;
+    margin-left: .5em;
     left: 0px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -73,15 +56,12 @@ p a {
     vertical-align: left;
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    \\background-color: black;
     margin-top: 1px;
     position: relative;
 }
 
 .navbar {
     width: 100%;
-    font-family: Helvetica , monospace;
 }
 
 #share {
@@ -90,13 +70,12 @@ p a {
 }
 
 #navbar-bottom img {
-    height: 30px;
+    height: 1em;
 }
 
 #info {
     float: right;
 }
-
 
 body {
     background: url('') no-repeat center center fixed;
