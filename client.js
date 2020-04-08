@@ -22,7 +22,7 @@ const twPrefix = 'https://twitter.com/intent/tweet?url=';
 const bgPrefix = 'rgba(0, 0, 0, 0) url("';
 const bgSuffix = '") no-repeat fixed 50% 50% / cover padding-box';
 const emailPrefix = "mailto:?subject=Exploring%20the%20Collections&body=";
-const remote = 'https://raw.githubusercontent.com/AucklandMuseum/api_monkey/master/flickr7.json';
+const remote = 'https://raw.githubusercontent.com/AucklandMuseum/ChromeNewTabExtension/master/images.json';
 const local = 'local.json'
 
 $('*').mousemove(function() {
