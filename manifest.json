@@ -1,0 +1,36 @@
+{
+  "name": "Auckland Museum Collections",
+  "manifest_version": 2,
+  "version": "1.5",
+  "description": "Extension sets the background of blank tabs to a photo from the Auckland Museum collections.",
+  "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
+  "icons": {
+    "16": "images/loc16.png",
+    "24": "images/loc16.png",
+    "32": "images/loc16.png",
+    "128": "images/loc128.png",
+    "187": "images/loc.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/loc16.png",
+      "24": "images/loc24.png",
+      "32": "images/loc32.png",
+      "128": "images/loc128.png"
+    },
+    "page_action": {
+      "default_icon": {
+        "16": "images/loc16.png",
+        "24": "images/loc16.png",
+        "32": "images/loc16.png",
+        "128": "images/loc128.png",
+        "187": "images/loc.png"
+      }
+    },
+    "default_title": "Auckland Museum Collections"
+  },
+  "permissions": ["activeTab"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}
