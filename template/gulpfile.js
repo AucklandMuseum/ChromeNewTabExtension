@@ -1,41 +1,61 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var pkg = require('./package.json');
+"use strict";
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
+// Load plugins
+const browsersync = require("browser-sync").create();
+const del = require("del");
+const gulp = require("gulp");
+const merge = require("merge-stream");
 
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    },
+    port: 3000
+  });
+  done();
+}
+
+// BrowserSync reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
+
+// Clean vendor
+function clean() {
+  return del(["./vendor/"]);
+}
+
+// Bring third party dependencies from node_modules into vendor directory
+function modules() {
   // Bootstrap
-  gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
-
+  var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
+    .pipe(gulp.dest('./vendor/bootstrap'));
   // jQuery
-  gulp.src([
+  var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'))
+    .pipe(gulp.dest('./vendor/jquery'));
+  return merge(bootstrap, jquery);
+}
 
-})
+// Watch files
+function watchFiles() {
+  gulp.watch("./**/*.css", browserSyncReload);
+  gulp.watch("./**/*.html", browserSyncReload);
+}
 
-// Default task
-gulp.task('default', ['vendor']);
+// Define complex tasks
+const vendor = gulp.series(clean, modules);
+const build = gulp.series(vendor);
+const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
-
-// Dev task
-gulp.task('dev', ['browserSync'], function() {
-  gulp.watch('./css/*.css', browserSync.reload);
-  gulp.watch('./*.html', browserSync.reload);
-});
+// Export tasks
+exports.clean = clean;
+exports.vendor = vendor;
+exports.build = build;
+exports.watch = watch;
+exports.default = build;
