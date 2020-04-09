@@ -2,7 +2,7 @@ Auckland Museum Google Chrome extension
 ===========
 About this code
 -----
-This is a Google Chrome extension that displays images from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira. It's based on the [Library of Congress' "Free to Use" extension](https://labs.loc.gov/experiments/free-to-use-browser-extension/). The images are housed in the [Auckland Museum Collections Flickr account](https://www.flickr.com/photos/aucklandmuseum_collections/albums/with/72157713787050202).
+This is a [Google Chrome extension](https://chrome.google.com/webstore/detail/auckland-museum-collectio/hbbhohgdcbfbjljeoflljbeiocnhdfag) that displays images from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira. It's based on the [Library of Congress' "Free to Use" extension](https://labs.loc.gov/experiments/free-to-use-browser-extension/). The images are housed in the [Auckland Museum Collections Flickr account](https://www.flickr.com/photos/aucklandmuseum_collections/albums/with/72157713787050202).
 
 About Auckland Museum
 -----
