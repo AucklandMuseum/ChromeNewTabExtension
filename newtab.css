@@ -6,23 +6,27 @@ p a {
     width: 50%;
     margin-top: auto;
     margin-bottom: auto;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #navarrows img {
     height: 110px;
-    position: fixed;
-    top: 40%;
-    cursor: pointer;
 }
 
 #rightarrow {
+    position: fixed;
+    top: 40%;
     right: 0px;
-    margin-right: .5em;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #leftarrow {
-    margin-left: .5em;
+    position: fixed;
+    top: 40%;
     left: 0px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -56,12 +60,15 @@ p a {
     vertical-align: left;
     text-decoration: none;
     color: white;
+    font-size: 18px;
+    \\background-color: black;
     margin-top: 1px;
     position: relative;
 }
 
 .navbar {
     width: 100%;
+    font-family: Helvetica , monospace;
 }
 
 #share {
@@ -70,12 +77,13 @@ p a {
 }
 
 #navbar-bottom img {
-    height: 1em;
+    height: 30px;
 }
 
 #info {
     float: right;
 }
+
 
 body {
     background: url('') no-repeat center center fixed;

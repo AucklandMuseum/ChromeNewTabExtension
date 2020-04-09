@@ -21,7 +21,7 @@ const fbPrefix = 'https://www.facebook.com/sharer/sharer.php?u=';
 const twPrefix = 'https://twitter.com/intent/tweet?url=';
 const bgPrefix = 'rgba(0, 0, 0, 0) url("';
 const bgSuffix = '") no-repeat fixed 50% 50% / cover padding-box';
-const emailPrefix = "mailto:?subject=Exploring%20the%20Collections&body=";
+const emailPrefix = "mailto:?subject=Auckland Museum collections&body=";
 const remote = 'https://raw.githubusercontent.com/AucklandMuseum/ChromeNewTabExtension/master/images.json';
 const local = 'local.json'
 
@@ -59,7 +59,7 @@ function goForward() {
     $.getJSON(remote, function(data) {
       insertImageURL(data[index]['imageURL']);
       insertURL(data[index]['url']);
-      insertTitleYear(data[index]['title'], data[currentIndex + 1]['year']);
+      insertTitle(data[index]['title']);
       currentIndex++;
     })
   }
@@ -82,7 +82,7 @@ function goBack(index, type) {
       console.log(data[index]['imageURL']);
       insertImageURL(data[index]['imageURL']);
       insertURL(data[index]['url']);
-      insertTitleYear(data[index]['title'], data[index]['year']);
+      insertTitle(data[index]['title']);
       currentIndex--;
     })
   }
@@ -198,12 +198,12 @@ function insertURL(url) {
   $('#email').attr('href', emailPrefix + url);
 }
 
-function insertTitleYear(title, year) {
+function insertTitle(title) {
   $('#add-info').empty();
-  $('#add-info').append(title + ' | ' + year);
+  $('#add-info').append(title);
 }
 
-function updateState(bgImage, url, title, year) {
+function updateState(bgImage, url, title) {
   $('#dwnld').attr('href', bgImage);
   $('body').css('background', bgPrefix + bgImage + bgSuffix);
   $('#add-info').attr('href', url);
@@ -211,7 +211,7 @@ function updateState(bgImage, url, title, year) {
   $('#tw').attr('href', twPrefix + url);
   $('#email').attr('href', emailPrefix + url);
   $('#add-info').empty();
-  $('#add-info').append(title + ' | ' + year);
+  $('#add-info').append(title);
 }
 
 function hideRemoteIcons() {
@@ -237,7 +237,7 @@ function finishRemote() {
   showRemoteIcons();
   insertImageURL(remoteData[index]['imageURL']);
   insertURL(remoteData[index]['url']);
-  insertTitleYear(remoteData[index]['title'], remoteData[index]['year']);
+  insertTitle(remoteData[index]['title']);
   recentlyUsed.push([index, 'r']);
   recentlyRemote.push(index);
   currentIndex++;
