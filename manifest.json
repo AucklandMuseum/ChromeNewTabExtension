@@ -5,26 +5,26 @@
   "description": "Sets the background of new tabs to an image from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira.",
   "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
   "icons": {
-    "16": "images/16.png",
-    "24": "images/24.png",
-    "32": "images/32.png",
-    "128": "images/128.png",
-    "187": "images/187.png"
+    "16": "img/16.png",
+    "24": "img/24.png",
+    "32": "img/32.png",
+    "128": "img/128.png",
+    "187": "img/187.png"
   },
   "browser_action": {
     "default_icon": {
-      "16": "images/16.png",
-      "24": "images/24.png",
-      "32": "images/32.png",
-      "128": "images/128.png"
+      "16": "img/16.png",
+      "24": "img/24.png",
+      "32": "img/32.png",
+      "128": "img/128.png"
     },
     "page_action": {
       "default_icon": {
-        "16": "images/16.png",
-        "24": "images/24.png",
-        "32": "images/32.png",
-        "128": "images/128.png",
-        "187": "images/187.png"
+        "16": "img/16.png",
+        "24": "img/24.png",
+        "32": "img/32.png",
+        "128": "img/128.png",
+        "187": "img/187.png"
       }
     },
     "default_title": "Auckland Museum Collections"
