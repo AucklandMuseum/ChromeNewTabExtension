@@ -4,6 +4,8 @@ About this code
 -----
 This is a [Google Chrome extension](https://chrome.google.com/webstore/detail/auckland-museum-collectio/hbbhohgdcbfbjljeoflljbeiocnhdfag) that displays images from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira. It's based on the [Library of Congress' "Free to Use" extension](https://labs.loc.gov/experiments/free-to-use-browser-extension/). The images are housed in the [Auckland Museum Collections Flickr account](https://www.flickr.com/photos/aucklandmuseum_collections/albums/with/72157713787050202).
 
+![Screenshot of the extension in use](https://user-images.githubusercontent.com/12046008/79305707-fe0ea680-7f47-11ea-8259-c1dc9449a7a2.jpg)
+
 About Auckland Museum
 -----
 Since 1852, Auckland Museum has been amassing a world-class, encyclopaedic collection, one that now comprises some three million objects and counting—each telling a story that helps interpret, understand, and illuminate the history of Aotearoa and its people.
