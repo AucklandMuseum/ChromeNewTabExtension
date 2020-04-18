@@ -1,8 +1,8 @@
 {
-  "name": "Auckland Museum Collections",
+  "name": "Auckland Museum Collections (Beta)",
   "manifest_version": 2.1.0,
   "version": "1.8.0",
-  "description": "Sets the background of new tabs to an image from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira.",
+  "description": "See incredible Auckland Museum collection items every time you open a new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
   "icons": {
     "16": "img/16.png",
