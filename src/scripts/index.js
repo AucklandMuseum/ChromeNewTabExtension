@@ -1,3 +1,7 @@
+import jquery from "jquery";
+window.$ = window.jQuery = jquery;
+// import "bootstrap/css/bootstrap.min.css";
+
 $(document).ready(function() {
   console.log('client connected');
   $.getJSON(remote, function(data) {

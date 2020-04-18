@@ -1,0 +1,44 @@
+{
+  "name": "chromenewtabextension",
+  "version": "1.8.0",
+  "description": "Auckland Museum collection images on a new Google Chrome tab",
+  "main": "index.js",
+  "browserslist": [
+    "last 2 Baidu version",
+    "last 2 ChromeAndroid version",
+    "last 2 iOS version",
+    "last 2 Chrome version",
+    "last 2 Firefox version",
+    "last 2 FirefoxAndroid version",
+    "last 2 Android version",
+    "last 2 Opera version",
+    "last 2 OperaMobile version",
+    "last 2 Safari version",
+    "last 2 Samsung version",
+    "last 2 Edge version",
+    "last 2 UCAndroid version",
+    "last 2 kaios version"
+  ],
+  "scripts": {
+    "dev": "parcel ./src/index.html --port 3000",
+    "prebuild": "rm -rf ./dist/",
+    "build": "parcel build ./src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AucklandMuseum/ChromeNewTabExtension.git"
+  },
+  "author": "Hugh Lilly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AucklandMuseum/ChromeNewTabExtension/issues"
+  },
+  "homepage": "https://github.com/AucklandMuseum/ChromeNewTabExtension#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

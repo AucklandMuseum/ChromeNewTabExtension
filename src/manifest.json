@@ -1,7 +1,7 @@
 {
   "name": "Auckland Museum Collections",
-  "manifest_version": 2,
-  "version": "1.5",
+  "manifest_version": 2.1.0,
+  "version": "1.8.0",
   "description": "Sets the background of new tabs to an image from the collections of Auckland War Memorial Museum Tāmaki Paenga Hira.",
   "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
   "icons": {
@@ -27,10 +27,10 @@
         "187": "img/187.png"
       }
     },
-    "default_title": "Auckland Museum Collections"
+    "default_title": "Auckland Museum Collections Beta"
   },
   "permissions": ["activeTab"],
   "chrome_url_overrides": {
-    "newtab": "newtab.html"
+    "newtab": "./index.html"
   }
 }
