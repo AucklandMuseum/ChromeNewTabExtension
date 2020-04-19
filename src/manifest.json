@@ -1,6 +1,6 @@
 {
   "name": "Auckland Museum Collections (Beta)",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "version": "1.8.1",
   "description": "See incredible Auckland Museum collection items every time you open a new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
