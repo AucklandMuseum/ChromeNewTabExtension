@@ -1,9 +1,9 @@
 {
-  "name": "Auckland Museum Collections (Beta)",
+  "name": "Auckland Museum Collections",
   "manifest_version": 2,
   "version": "1.8.1",
   "description": "See incredible Auckland Museum collection items every time you open a new tab.",
-  "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
+  "homepage_url": "https://www.aucklandmuseum.com/collections",
   "icons": {
     "16": "assets/logo/16.png",
     "24": "assets/logo/24.png",
@@ -27,7 +27,7 @@
         "187": "assets/logo/187.png"
       }
     },
-    "default_title": "Auckland Museum Collections Beta"
+    "default_title": "Auckland Museum Collections"
   },
   "permissions": [
     "activeTab",
