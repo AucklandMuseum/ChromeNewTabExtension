@@ -1,4 +1,4 @@
-import jquery from "jquery";
+import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
 // import "bootstrap/css/bootstrap.min.css";
 
@@ -12,6 +12,7 @@ $(document).ready(function() {
     });
   useRemote();
 });
+
 var beingShown = false; //state of whether the ui is visible
 var skipTimeOut = false; //when true, the ui will stay visible
 var timeout = null;
@@ -21,13 +22,14 @@ var recentlyLocal = []; //indices of images recently used locally
 var index; //index used to go back and forward through recently viewed images
 var currentIndex = -1; //index of recently used
 var remoteData;
+
 const fbPrefix = 'https://www.facebook.com/sharer/sharer.php?u=';
 const twPrefix = 'https://twitter.com/intent/tweet?url=';
 const bgPrefix = 'rgba(0, 0, 0, 0) url("';
 const bgSuffix = '") no-repeat fixed 50% 50% / cover padding-box';
 const emailPrefix = "mailto:?subject=Auckland Museum collections&body=";
-const remote = 'https://raw.githubusercontent.com/AucklandMuseum/ChromeNewTabExtension/master/images.json';
-const local = 'local.json'
+const remote = 'https://gist.githubusercontent.com/hughlilly/47fab335ce08d39da11d14d30593e382/raw/e229c5cabd520600219ea25b8f92f858c6e56efd/AMChromeExtension.json';
+const local = 'assets/fallback.json'
 
 $('*').mousemove(function() {
   if (!beingShown) {
@@ -56,14 +58,14 @@ function goForward() {
   if (recentlyUsed[currentIndex + 1][1] === 'l') {
     $.getJSON(local, function(data) {
       $('#add-info').empty();
-      $('#add-info').append(data[index]['title']);
+      $('#add-info').append(data.photos[index].title);
       currentIndex++;
     })
   } else if (recentlyUsed[currentIndex + 1][1] === 'r') {
     $.getJSON(remote, function(data) {
-      insertImageURL(data[index]['imageURL']);
-      insertURL(data[index]['url']);
-      insertTitle(data[index]['title']);
+      insertImageURL(data.photos[index].img_url);
+      insertURL(data.photos[index].record_url);
+      insertTitle(data.photos[index].title);
       currentIndex++;
     })
   }
@@ -74,19 +76,20 @@ function goBack(index, type) {
   if (type === 'l') {
     $.getJSON(local, function(data) {
       console.log('using remote');
-      console.log(data[index]['imageURL']);
-      insertImageURL(data[index]['imageURL']);
+      console.log('Image URL:');
+      console.log(data.photos[index].img_url);
+      insertImageURL(data.photos[index].img_url);
       $('#add-info').empty();
-      $('#add-info').append(data[index]['title']);
+      $('#add-info').append(data.photos[index].title);
       currentIndex--;
     })
   } else if (type === 'r') {
     $.getJSON(remote, function(data) {
       console.log('using remote');
-      console.log(data[index]['imageURL']);
-      insertImageURL(data[index]['imageURL']);
-      insertURL(data[index]['url']);
-      insertTitle(data[index]['title']);
+      console.log(data.photos[index].img_url);
+      insertImageURL(data.photos[index].img_url);
+      insertURL(data.photos[index].record_url);
+      insertTitle(data.photos[index].title);
       currentIndex--;
     })
   }
@@ -108,7 +111,6 @@ $(document).on('mousemove', function() {
   clearTimeout(timeout);
   timeout = setTimeout(function() {
     if (skipTimeOut == false) {
-      console.log('Mouse idle for 2 sec');
       hideAll();
     }
   }, 2000);
@@ -161,9 +163,9 @@ function useRemote() {
   //changes background to random from remote json
   $.getJSON(remote, function(data) {
       do {
-        index = Math.floor(Math.random() * data.length);
+        index = Math.floor(Math.random() * data.photos.length);
       } while (recentlyRemote.includes(index));
-      testImage(data[index]['imageURL']);
+      testImage(data.photos[index].img_url);
     })
     .fail(function() {
       useLocal();
@@ -173,18 +175,18 @@ function useRemote() {
 function useLocal() {
   //changes background to random from local json
   $.getJSON(local, function(data) {
-    console.log('using local');
+    console.log('using local fallback; contains', data.photos.length, 'entries');
     do {
-      var index = Math.floor(Math.random() * data.length);
+      var index = Math.floor(Math.random() * data.photos.length);
     } while (recentlyLocal.includes(index));
     hideRemoteIcons();
-    insertImageURL(data[index]['imageURL']);
+    insertImageURL(data.photos[index].img_url);
     $('#add-info').empty();
-    $('#add-info').append(data[index]['title']);
+    $('#add-info').append(data.photos[index].title);
     recentlyUsed.push([index, 'l'])
     currentIndex++;
     recentlyLocal.push(index);
-    if (recentlyLocal.length === data.length) {
+    if (recentlyLocal.length === data.photos.length) {
       recentlyLocal = [];
     }
   });
@@ -215,7 +217,7 @@ function updateState(bgImage, url, title) {
   $('#tw').attr('href', twPrefix + url);
   $('#email').attr('href', emailPrefix + url);
   $('#add-info').empty();
-  $('#add-info').append(title);
+  $('#add-info').append(data.photos[index].title);
 }
 
 function hideRemoteIcons() {
@@ -239,9 +241,9 @@ function testImage(URL) {
 
 function finishRemote() {
   showRemoteIcons();
-  insertImageURL(remoteData[index]['imageURL']);
-  insertURL(remoteData[index]['url']);
-  insertTitle(remoteData[index]['title']);
+  insertImageURL(remoteData.photos[index].img_url);
+  insertURL(remoteData.photos[index].record_url);
+  insertTitle(remoteData.photos[index].title);
   recentlyUsed.push([index, 'r']);
   recentlyRemote.push(index);
   currentIndex++;

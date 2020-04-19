@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "parcel ./src/index.html --port 3000",
     "prebuild": "rm -rf ./dist/",
-    "build": "parcel build ./src/index.html --public-url ./"
+    "build": "parcel build ./src/manifest.json --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "jquery": "^3.5.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-web-extension": "^1.6.1"
   }
 }
