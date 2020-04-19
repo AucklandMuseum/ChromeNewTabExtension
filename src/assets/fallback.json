@@ -1,0 +1,16 @@
+{
+  "rows" : [
+   {
+      "img_url":"local_bg1.jpg",
+      "title":"[Not connected to the Internet]"
+   },
+   {
+      "img_url":"local_bg2.jpg",
+      "title":"[Not connected to the Internet]"
+   },
+   {
+      "img_url":"local_bg3.jpg",
+      "title":"[Not connected to the Internet]"
+   }
+]
+}

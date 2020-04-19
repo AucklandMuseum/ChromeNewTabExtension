@@ -1,0 +1,42 @@
+{
+  "name": "Auckland Museum Collections (Beta)",
+  "manifest_version": 2,
+  "version": "1.8.1",
+  "description": "See incredible Auckland Museum collection items every time you open a new tab.",
+  "homepage_url": "https://www.aucklandmuseum.com/discover/collections/beta",
+  "icons": {
+    "16": "assets/logo/16.png",
+    "24": "assets/logo/24.png",
+    "32": "assets/logo/32.png",
+    "128": "assets/logo/128.png",
+    "187": "assets/logo/187.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/logo/16.png",
+      "24": "assets/logo/24.png",
+      "32": "assets/logo/32.png",
+      "128": "assets/logo/128.png"
+    },
+    "page_action": {
+      "default_icon": {
+        "16": "assets/logo/16.png",
+        "24": "assets/logo/24.png",
+        "32": "assets/logo/32.png",
+        "128": "assets/logo/128.png",
+        "187": "assets/logo/187.png"
+      }
+    },
+    "default_title": "Auckland Museum Collections Beta"
+  },
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "https://gist.githubusercontent.com/hughlilly/*",
+    "*://*.aucklandmuseum.com/*",
+    "https://*.flickr.com/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "./index.html"
+  }
+}
