@@ -2,7 +2,7 @@
   "name": "Auckland Museum Collections",
   "manifest_version": 2,
   "version": "1.8.1",
-  "description": "See incredible Auckland Museum collection items in every time new tab.",
+  "description": "See incredible Auckland Museum collection items in every new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/collections",
   "icons": {
     "16": "assets/logo/16.png",
@@ -30,11 +30,7 @@
     "default_title": "Auckland Museum Collections"
   },
   "permissions": [
-    "activeTab",
-    "webRequest",
-    "https://gist.githubusercontent.com/hughlilly/*",
-    "*://*.aucklandmuseum.com/*",
-    "https://*.flickr.com/*"
+    "activeTab"
   ],
   "chrome_url_overrides": {
     "newtab": "./index.html"
