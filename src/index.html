@@ -4,54 +4,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Explore the Auckland Museum Collections">
+  <meta name="description" content="Explore Auckland Museum collection items">
   <meta name="author" content="">
 
   <title>New Tab</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./styles/index.css">
-
 </head>
 
 <body>
+
   <div id=rows class="container-fluid">
     <div id="row1" class="col-lg-4"></div>
     <div id="row2" class="col-lg-4"></div>
     <div id="row3" class="col-lg-4"></div>
   </div>
   <div id="fb-root"></div>
-  <!-- navigation arrows-->
+
   <div id="arrows">
     <div id="navarrows" class="align-middle">
       <img id="rightarrow" src="assets/arrow.png">
     </div>
     <div id="navarrows" class="align-middle">
       <img id="leftarrow" src="assets/arrow.png"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" style="background: rgba(0,0,0,.5) !important; " id="navbar-bottom">
+    <div class="navbar" class="container-fluid">
+
+      <span class="col-lg-8.5">
+        <a id='AM' href="https://www.aucklandmuseum.com/collections"><img src='assets/logo/amwhite.svg' style="height:3em"></a>
+        <a id='add-info' href="" style="padding-top: 1.33em; padding-left: 2em;">[Title]</a>
+      </span>
+
+      <span id="share" class="col-lg-3.5">
+        <a id='fb' href=""><img src='assets/fb.png'></a>
+        <a id='tw' href=""><img src='assets/tw.png'></a>
+        <a id='email' href=""><img src='assets/e.png'></a>
+        <a id='dwnld' href="" download><img src='assets/dl.png'></a>
+      </span>
     </div>
+  </nav>
 
+  <script src="./scripts/index.js"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" style="background: rgba(0,0,0,.5) !important; " id="navbar-bottom">
-      <div class="navbar" class="container-fluid">
-
-        <span class="col-lg-8.5">
-            <a id ='AM' href="https://www.aucklandmuseum.com/collections"><img src='assets/logo/amwhite.svg' style="height:3em" ></a>
-            <a id='add-info' href="" style="padding-top: 1.33em; padding-left: 2em;">[Title]</a>
-
-
-        </span>
-        <span id="share" class="col-lg-3.5">
-            <a id='fb' href=""><img src='assets/fb.png'></a>
-            <a id='tw' href=""><img src='assets/tw.png'></a>
-            <a id='email' href=""><img src='assets/e.png'></a>
-            <a id='dwnld' href="" download><img src='assets/dl.png'></a>
-        </span>
-      </div>
-    </nav>
-    <script src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="module" src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

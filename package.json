@@ -34,12 +34,12 @@
     "url": "https://github.com/AucklandMuseum/ChromeNewTabExtension/issues"
   },
   "homepage": "https://github.com/AucklandMuseum/ChromeNewTabExtension#readme",
-  "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-web-extension": "^1.6.1"
+    "parcel-plugin-web-extension": "^1.6.1",
+    "popper.js": "^1.16.1"
   }
 }
