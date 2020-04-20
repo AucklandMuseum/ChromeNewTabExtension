@@ -1,6 +1,7 @@
 import jquery from 'jquery';
 window.$ = window.jQuery = jquery;
-// import "bootstrap/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 $(document).ready(function() {
   console.log('client connected');
