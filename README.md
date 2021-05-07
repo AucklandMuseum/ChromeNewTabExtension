@@ -15,3 +15,17 @@ The Museum is a war memorial for the province of Auckland, and houses one of New
 Its natural-sciences collection includes thousands of important botanical, marine and land-vertebrate specimens, and its documentary-heritage collection brings to life the rich social, artistic, and commercial history of Tāmaki Makaurau Auckland through original letters and diaries, photographs and artworks, maps, ephemera, rare books, early newspapers. There is also a collection of musical instruments, an impressive and wide-ranging decorative-arts collection, and the country's leading collection of European, Asian and New Zealand applied arts, including contemporary and historic ceramics, glass, metalwork, furniture, textiles, and jewellery.
 
 See more at [aucklandmuseum.com/collections](http://aucklandmuseum.com/collections).
+
+Build locally
+-----
+
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production
+$ npm run build
+
+After you've built your version, it'll be in `/dist`. Zip this folder and upload to the [Chrome Web Store Developer Console](https://chrome.google.com/webstore/devconsole/) as a new version.
