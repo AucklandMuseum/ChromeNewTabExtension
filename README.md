@@ -24,14 +24,20 @@ Build locally
 
 ### install dependencies
 
+```
 $ npm install
+```
 
 ### serve with hot reload at localhost:3000
 
+```
 $ npm run dev
+```
 
 ### build for production
 
+```
 $ npm run build
+```
 
 After you've built your version, it'll be in `/dist`. Zip this folder and upload to the [Chrome Web Store Developer Console](https://chrome.google.com/webstore/devconsole/) as a new version.
