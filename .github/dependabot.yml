@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-      target-branch: dev
+    target-branch: dev
     # Increase the version requirements for Composer
     # only when required
     versioning-strategy: increase-if-necessary
