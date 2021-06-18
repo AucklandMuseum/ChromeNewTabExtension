@@ -1,6 +1,6 @@
 {
   "name": "chromenewtabextension",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Auckland Museum collection images on a new Google Chrome tab",
   "main": "index.js",
   "browserslist": [
@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/AucklandMuseum/ChromeNewTabExtension#readme",
   "devDependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-web-extension": "^1.6.1",
