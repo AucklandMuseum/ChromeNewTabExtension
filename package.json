@@ -1,6 +1,6 @@
 {
   "name": "chromenewtabextension",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Auckland Museum collection images on a new Google Chrome tab",
   "main": "index.js",
   "browserslist": [
