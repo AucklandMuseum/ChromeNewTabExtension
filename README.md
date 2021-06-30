@@ -40,4 +40,12 @@ $ npm run dev
 $ npm run build
 ```
 
-After you've built your version, it'll be in `/dist`. Zip this folder and upload to the [Chrome Web Store Developer Console](https://chrome.google.com/webstore/devconsole/) as a new version.
+You'll need to manually increment [the version number](https://developer.chrome.com/docs/extensions/mv3/manifest/version/) in `./src/manifest.json`.
+After you've built your version, it'll be in `/dist`.
+Run this command to create a [zip](https://ss64.com/osx/zip.html) file on your Desktop:
+
+```
+$ npm run zip
+```
+
+Upload that file to the [Chrome Web Store Developer Console](https://chrome.google.com/webstore/devconsole/) as a new version.
