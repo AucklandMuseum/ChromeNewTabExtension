@@ -1,6 +1,6 @@
 {
   "name": "chromenewtabextension",
-  "version": "1.9.1",
+  "version": "1.9.1.1",
   "description": "Auckland Museum collection images on a new Google Chrome tab",
   "main": "index.js",
   "browserslist": [
@@ -22,7 +22,8 @@
   "scripts": {
     "dev": "parcel ./src/index.html --port 3000",
     "prebuild": "rm -rf ./dist/",
-    "build": "parcel build ./src/manifest.json --public-url ./"
+    "build": "parcel build ./src/manifest.json --public-url ./",
+    "zip": "zip -r ~/Desktop/$npm_package_name-$npm_package_version.zip ./dist"
   },
   "repository": {
     "type": "git",
