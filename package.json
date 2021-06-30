@@ -22,7 +22,8 @@
   "scripts": {
     "dev": "parcel ./src/index.html --port 3000",
     "prebuild": "rm -rf ./dist/",
-    "build": "parcel build ./src/manifest.json --public-url ./"
+    "build": "parcel build ./src/manifest.json --public-url ./",
+    "zip": "zip -jduli ~/Desktop/ChromeNewTabExtension.zip ./dist/*"
   },
   "repository": {
     "type": "git",
