@@ -1,7 +1,7 @@
 {
   "name": "Auckland Museum Collections",
   "manifest_version": 2,
-  "version": "1.9.1.1",
+  "version": "1.9.2.0",
   "description": "See incredible Auckland Museum collection items in every new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/collections",
   "icons": {
@@ -29,9 +29,6 @@
     },
     "default_title": "Auckland Museum Collections"
   },
-  "permissions": [
-    "activeTab"
-  ],
   "chrome_url_overrides": {
     "newtab": "./index.html"
   }
