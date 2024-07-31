@@ -2,6 +2,9 @@ import jquery from "jquery";
 window.$ = window.jQuery = jquery;
 // import "bootstrap/dist/css/bootstrap-reboot.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import bg1 from "../assets/local_bg1.jpg";
+import bg2 from "../assets/local_bg2.jpg";
+import bg3 from "../assets/local_bg3.jpg";
 
 document.addEventListener("DOMContentLoaded", function () {
   if (!remoteData) {
@@ -30,7 +33,7 @@ const bgPrefix = 'rgba(0, 0, 0, 0) url("';
 const bgSuffix = '") no-repeat fixed 50% 50% / cover padding-box';
 const emailPrefix =
   "mailto:collectionenquiries@aucklandmuseum.com?subject=Auckland Museum collections&body=";
-const remote = "https://a-ap.storyblok.com/f/3000021/x/2686254794/data.json";
+const remote = "https://a-ap.storyblok.com/f/3000021/x/01a4bbfa2c/data.json";
 const local = "assets/fallback.json";
 
 $("*").on("mousemove", function () {
@@ -175,26 +178,40 @@ function useRemote() {
 
 function useLocal() {
   //changes background to random from local json
-  $.getJSON(local, function (data) {
-    //console.log(
-    //   "using local fallback; contains",
-    //   data.photos.length,
-    //   "entries"
-    // );
-    do {
-      var index = Math.floor(Math.random() * data.photos.length);
-    } while (recentlyLocal.includes(index));
-    hideRemoteIcons();
-    insertImageURL(data.photos[index].img_url);
-    $("#add-info").empty();
-    $("#add-info").append(data.photos[index].title);
-    recentlyUsed.push([index, "l"]);
-    currentIndex++;
-    recentlyLocal.push(index);
-    if (recentlyLocal.length === data.photos.length) {
-      recentlyLocal = [];
-    }
-  });
+  var data = {
+    photos: [
+      {
+        img_url: bg1,
+        title: "[Not connected to the Internet]",
+      },
+      {
+        img_url: bg2,
+        title: "[Not connected to the Internet]",
+      },
+      {
+        img_url: bg3,
+        title: "[Not connected to the Internet]",
+      },
+    ],
+  };
+  //console.log(
+  //   "using local fallback; contains",
+  //   data.photos.length,
+  //   "entries"
+  // );
+  do {
+    var index = Math.floor(Math.random() * data.photos.length);
+  } while (recentlyLocal.includes(index));
+  hideRemoteIcons();
+  insertImageURL(data.photos[index].img_url);
+  $("#add-info").empty();
+  $("#add-info").append(data.photos[index].title);
+  recentlyUsed.push([index, "l"]);
+  currentIndex++;
+  recentlyLocal.push(index);
+  if (recentlyLocal.length === data.photos.length) {
+    recentlyLocal = [];
+  }
 }
 
 function insertImageURL(bgImage) {

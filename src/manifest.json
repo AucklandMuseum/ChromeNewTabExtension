@@ -22,5 +22,11 @@
   },
   "chrome_url_overrides": {
     "newtab": "./index.html"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
