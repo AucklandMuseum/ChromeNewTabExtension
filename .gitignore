@@ -26,3 +26,5 @@ node_modules
 .parcel-cache/snapshot-90119cf973c747f0.txt
 index.js.map
 index.js
+/dist.pem
+/dist.crx
