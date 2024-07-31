@@ -1,8 +1,7 @@
 {
   "name": "chromenewtabextension",
-  "version": "1.9.5.0",
+  "version": "2.0.0.0",
   "description": "Auckland Museum collection images on a new Google Chrome tab",
-  "main": "index.js",
   "browserslist": [
     "last 2 Baidu version",
     "last 2 ChromeAndroid version",
@@ -21,8 +20,7 @@
   ],
   "scripts": {
     "dev": "parcel ./src/index.html --port 3000",
-    "prebuild": "rm -rf ./dist/",
-    "build": "parcel build ./src/manifest.json --public-url ./",
+    "build": "parcel build --public-url ./ ./src/manifest.json --config @parcel/config-webextension --dist-dir dist ",
     "zip": "zip -r ~/Desktop/$npm_package_name-$npm_package_version.zip ./dist"
   },
   "repository": {
@@ -36,10 +34,12 @@
   },
   "homepage": "https://github.com/AucklandMuseum/ChromeNewTabExtension#readme",
   "devDependencies": {
-    "bootstrap": "^5.0.2",
-    "jquery": "^3.6.0",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-web-extension": "^1.6.1",
-    "popper.js": "^1.16.1"
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "@parcel/config-webextension": "^2.12.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
   }
 }

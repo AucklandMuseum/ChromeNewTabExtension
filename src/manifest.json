@@ -1,7 +1,7 @@
 {
   "name": "Auckland Museum Collections",
-  "manifest_version": 2,
-  "version": "1.9.2.0",
+  "manifest_version": 3,
+  "version": "2.0.0.0",
   "description": "See incredible Auckland Museum collection items in every new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/collections",
   "icons": {
@@ -11,21 +11,12 @@
     "128": "assets/logo/128.png",
     "187": "assets/logo/187.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "assets/logo/16.png",
       "24": "assets/logo/24.png",
       "32": "assets/logo/32.png",
       "128": "assets/logo/128.png"
-    },
-    "page_action": {
-      "default_icon": {
-        "16": "assets/logo/16.png",
-        "24": "assets/logo/24.png",
-        "32": "assets/logo/32.png",
-        "128": "assets/logo/128.png",
-        "187": "assets/logo/187.png"
-      }
     },
     "default_title": "Auckland Museum Collections"
   },
