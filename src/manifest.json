@@ -1,7 +1,7 @@
 {
-  "name": "Auckland Museum Collections",
+  "name": "Auckland Museum Collections V2",
   "manifest_version": 3,
-  "version": "2.0.0.0",
+  "version": "2.0.0.1",
   "description": "See incredible Auckland Museum collection items in every new tab.",
   "homepage_url": "https://www.aucklandmuseum.com/collections",
   "icons": {
